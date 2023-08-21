@@ -1,0 +1,35 @@
+/* fonts */
+@font-face {
+  font-family: "alex_brushregular";
+  src: url(fonts/alexbrush-regular-webfont.woff) format("woff");
+}
+#rubah {
+  font-family: "alex_brushregular";
+}
+.ganti a {
+  color: blueviolet;
+}
+
+.kata {
+  font-family: "alex_brushregular";
+  font-size: 2em;
+  text-shadow: 1px 3px white;
+}
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #7eeffb;
+}
+.jumbotron h1 {
+  font-family: "alex_brushregular";
+  text-shadow: 0 3px white;
+}
+h2 {
+  font-family: "alex_brushregular";
+}
+#galery {
+  background: #7eeffb;
+  margin-top: 0;
+}
+section {
+  padding-top: 5rem;
+}
