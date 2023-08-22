@@ -124,7 +124,8 @@
             <div class="col-md-6">
               <form
                    method="POST" 
-                   action=https://script.google.com/macros/s/AKfycbyVn71AsaP9qpBpNGEcr33KTO2-vTzuBuNEEmIe-p84M3_Sc62Dhs412QD7I9DOaLocBQ/exec> 
+                   action=https://script.google.com/macros/s/AKfycbyVn71AsaP9qpBpNGEcr33KTO2-vTzuBuNEEmIe-p84M3_Sc62Dhs412QD7I9DOaLocBQ/exec
+                   id="my-form"> 
                 <div class="mb-3">
                   <label for="name" class="form-label">Nama lengkap</label>
                   <input type="name" class="form-control" id="name" aria-describedby="name" name="nama">
@@ -152,5 +153,22 @@
 </footer>
 <!-- akhir footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      window.addEventListener("load", function() {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("terimaksih atas masukannya");
+    })
+  });
+});
+    </script>
   </body>
 </html>
